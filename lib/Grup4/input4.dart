@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-
+import 'package:UAS_project/controller/image_upload.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -19,11 +19,9 @@ class _input4State extends State<input4> {
   // List<Map<String, dynamic>> dataList = [];
 
   final namaController = TextEditingController();
-  final nimController = TextEditingController();
   final emailController = TextEditingController();
-  final statusController = TextEditingController();
-  final kodemkController = TextEditingController();
-  final jawabantextController = TextEditingController();
+  final jenisController = TextEditingController();
+  final teksController = TextEditingController();
   TextEditingController second = TextEditingController();
 
   TextEditingController third = TextEditingController();
@@ -54,17 +52,14 @@ class _input4State extends State<input4> {
     });
   }
 
-  void writeData(String nama, int nim, String email, String status,
-      String kodemk, String jawabantext) {
+  void writeData(String nama, String email, String jenis, String teks) {
     Random random = Random();
     String num = random.nextInt(50000000).toString();
     databaseReference.child(num).set({
       'nama': nama,
-      'nim': nim,
       'email': email,
-      'status': status,
-      'kodemk': kodemk,
-      'jawabantext': jawabantext,
+      'jenis': jenis,
+      'teks': teks,
     }).asStream();
   }
 
@@ -85,18 +80,16 @@ class _input4State extends State<input4> {
 
   void clearFields() {
     namaController.clear();
-    nimController.clear();
+    jenisController.clear();
     emailController.clear();
-    statusController.clear();
-    kodemkController.clear();
-    jawabantextController.clear();
+    teksController.clear();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Firebase Realtime Database'),
+        title: Text('Input data P'),
       ),
       body: Column(
         children: [
@@ -109,25 +102,18 @@ class _input4State extends State<input4> {
                   decoration: InputDecoration(labelText: 'Nama'),
                 ),
                 TextField(
-                  controller: nimController,
-                  decoration: InputDecoration(labelText: 'NIM'),
-                ),
-                TextField(
                   controller: emailController,
                   decoration: InputDecoration(labelText: 'Email'),
                 ),
                 TextField(
-                  controller: statusController,
-                  decoration: InputDecoration(labelText: 'Status'),
+                  controller: jenisController,
+                  decoration: InputDecoration(labelText: 'Jenis'),
                 ),
                 TextField(
-                  controller: kodemkController,
-                  decoration: InputDecoration(labelText: 'KodeMK'),
+                  controller: teksController,
+                  decoration: InputDecoration(labelText: 'Teks'),
                 ),
-                TextField(
-                  controller: jawabantextController,
-                  decoration: InputDecoration(labelText: 'Jawaban Text'),
-                ),
+
                 // TextField(
                 //   controller: resumeController,
                 //   decoration: InputDecoration(labelText: 'Unggah???'),
@@ -141,23 +127,42 @@ class _input4State extends State<input4> {
                         // print(x);
                         writeData(
                           namaController.text,
-                          int.parse(nimController.text),
                           emailController.text,
-                          statusController.text,
-                          kodemkController.text,
-                          jawabantextController.text,
+                          jenisController.text,
+                          teksController.text,
                           // double.parse(nilaiController.text),
                           // resumeController.text,
                         );
                       },
                       child: Text('Tambah Data'),
                     ),
-                    ElevatedButton(
-                      onPressed: () {
-                        deleteData('0002');
-                      },
-                      child: Text('Bersihkan Kolom'),
-                    ),
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     deleteData('0002');
+                    //   },
+                    //   child: Text('Bersihkan Kolom'),
+                    // ),
+
+                    TextButton(
+                        onPressed: (() {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ImageUploads(),
+                            ),
+                          );
+                        }),
+                        child: Text("Unggah Citra W")),
+                    // TextButton(
+                    //     onPressed: (() {
+                    //       Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //           builder: (context) => ImageView(),
+                    //         ),
+                    //       );
+                    //     }),
+                    //     child: Text("Unggah Audio H"))
                   ],
                 ),
               ],
@@ -172,9 +177,9 @@ class _input4State extends State<input4> {
 class Data {
   final String key;
   final String nama;
-  final int nim;
-  final double nilai;
-  final String resume;
+  final String email;
+  final String jenis;
+  final String teks;
 
-  Data(this.key, this.nama, this.nim, this.nilai, this.resume);
+  Data(this.key, this.nama, this.email, this.jenis, this.teks);
 }
