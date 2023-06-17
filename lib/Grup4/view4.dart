@@ -2,22 +2,22 @@ import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'user1108780030.dart' as data1108780030;
+import 'user4.dart' as data4;
 
-class View1108780030 extends StatefulWidget {
-  const View1108780030({super.key});
+class View4 extends StatefulWidget {
+  const View4({super.key});
   @override
-  State<View1108780030> createState() => _View1108780030State();
+  State<View4> createState() => _View4State();
 }
 
-class _View1108780030State extends State<View1108780030> {
+class _View4State extends State<View4> {
 // data[]
   String _message = '';
 
 // Map<int, String> Nama=Data.
   // TextEditingController _textEditingController0 = TextEditingController();
-  List<int> NIM = data1108780030.index.values.toList();
-  List<String> Nama = data1108780030.nama.values.toList();
+  List<int> NIM = data4.index.values.toList();
+  List<String> Nama = data4.nama.values.toList();
   // @overrides
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _View1108780030State extends State<View1108780030> {
               //   final result = await Navigator.push(
               //     context,
               //     MaterialPageRoute(
-              //       builder: (context) => hal1108780030new(),
+              //       builder: (context) => hal4new(),
               //     ),
               //   );
               //   setState(() {
