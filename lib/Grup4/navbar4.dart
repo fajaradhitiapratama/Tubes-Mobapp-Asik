@@ -1,22 +1,10 @@
-//import 'package:UAS_project/Grup4/Write1108780030.dart';
-import 'package:UAS_project/1108780030/baca1108780030.dart';
-import 'package:UAS_project/1108780030/crud1108780030.dart';
-import 'package:UAS_project/1108780030/hal1108780030.dart';
 import 'package:UAS_project/Grup4/home4.dart';
-import 'package:UAS_project/1108780030/read_edit1108780030.dart';
-import 'package:UAS_project/1108780030/viewdata1108780030.dart';
+import 'package:UAS_project/Grup4/input4.dart';
+import 'package:UAS_project/Grup4/view4.dart';
 import 'package:UAS_project/services/auth_service.dart';
 import 'package:get/get.dart';
-// import 'package:haruka1_0/app/data/providers/auth_service.dart';
-// import 'package:haruka1_0/app/modules/awg/views/awg_view.dart';
 import 'package:flutter/material.dart';
-
-import '../controller/navbar_controller.dart';
-// import 'package:haruka1_0/app/modules/home/views/home_view.dart';
-// import 'package:haruka1_0/app/modules/account/views/account_view.dart';
-// import 'package:haruka1_0/app/modules/apg/views/apg_view.dart';
-// import 'package:haruka1_0/app/modules/dh_har/views/dbhar_view.dart';
-// import 'package:haruka1_0/app/modules/navbar/controller/navbar_controller.dart';
+import 'package:UAS_project/controller/navbar_controller.dart';
 
 class NavBarView extends StatelessWidget {
   NavBarView({Key? key}) : super(key: key);
@@ -25,55 +13,37 @@ class NavBarView extends StatelessWidget {
 
   final List<Widget> _listPage = [
     home4(),
-    // view4(),
+    view4(),
+    input4(),
     // update4(),
-    // input4()
-    // download4()
+    // download4(),
   ];
 
-  // final List<String> _listTitleAppBar = const [
-  //   'Home',
-  //   'Page-1',
-  //   'Page-2',
-  //   'CRUD',
-  //   'New CRUD'
-  //   // 'Page-4'
-  // ];
+  final List<String> _listTitleAppBar = const [
+    'Home',
+    'View Data',
+    'Input Data',
+    'Update Data',
+    'View Data W & H',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Obx(
       () => Scaffold(
-        // appBar: AppBar(
-        //   automaticallyImplyLeading: false,
-        //   title: Text("Test"),
-        //   actions: <Widget>[
-        //     IconButton(
-        //       icon: const Icon(
-        //         Icons.exit_to_app,
-        //         color: Colors.white,
-        //       ),
-        //       onPressed: () {
-        //         _showAlertDialog(context);
-        //         // AuthService.signOut();
-        //         // Navigator.pop(context);
-        //       },
-        //     ),
-        //   ],
-        // ),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _controller.currentTab.value,
           type: BottomNavigationBarType.fixed,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.assignment), label: 'View Data'),
+                icon: Icon(Icons.view_agenda), label: "View Data"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.science), label: 'Update Data'),
+                icon: Icon(Icons.input), label: 'Input Data'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.science), label: 'Input Data'),
+                icon: Icon(Icons.update), label: 'Update Data'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.science), label: 'View W & H'),
+                icon: Icon(Icons.view_compact), label: 'View Data W & H'),
           ],
           onTap: (value) => _controller.pageChange(value),
         ),

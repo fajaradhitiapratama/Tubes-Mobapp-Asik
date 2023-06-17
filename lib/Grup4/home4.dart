@@ -49,10 +49,10 @@ class _home4State extends State<home4> {
                         fontSize: 20),
                   )),
               // CircleAvatar(
-              //   radius: 60,
+              //   radius: 40,
               //   child: Container(
-              //     height: 20,
-              //     width: 20,
+              //     height: 30,
+              //     width: 30,
               //     decoration: const BoxDecoration(
               //       image: DecorationImage(
               //         image: AssetImage("lib/images/Abbey.jpg"),
@@ -70,7 +70,7 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
               Container(
                   alignment: Alignment.center,
@@ -80,13 +80,13 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
               // CircleAvatar(
-              //   radius: 60,
+              //   radius: 40,
               //   child: Container(
-              //     height: 20,
-              //     width: 20,
+              //     height: 30,
+              //     width: 30,
               //     decoration: const BoxDecoration(
               //       image: DecorationImage(
               //         image: AssetImage("lib/images/arya.JPG"),
@@ -104,7 +104,7 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
               Container(
                   alignment: Alignment.center,
@@ -114,13 +114,13 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
               // CircleAvatar(
-              //   radius: 60,
+              //   radius: 40,
               //   child: Container(
-              //     height: 20,
-              //     width: 20,
+              //     height: 30,
+              //     width: 30,
               //     decoration: const BoxDecoration(
               //       image: DecorationImage(
               //         image: AssetImage("lib/images/fajar.png"),
@@ -138,7 +138,7 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
               Container(
                   alignment: Alignment.center,
@@ -148,7 +148,7 @@ class _home4State extends State<home4> {
                     style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.w500,
-                        fontSize: 20),
+                        fontSize: 15),
                   )),
             ],
           ),

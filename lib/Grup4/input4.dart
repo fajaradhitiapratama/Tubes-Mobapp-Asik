@@ -8,13 +8,13 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class input3 extends StatefulWidget {
+class input4 extends StatefulWidget {
   @override
-  _input3State createState() => _input3State();
+  _input4State createState() => _input4State();
 }
 
-class _input3State extends State<input3> {
-  final databaseReference = FirebaseDatabase.instance.ref('Grup3');
+class _input4State extends State<input4> {
+  final databaseReference = FirebaseDatabase.instance.ref('Grup4');
   List<Data> dataList = [];
   // List<Map<String, dynamic>> dataList = [];
 
@@ -36,7 +36,7 @@ class _input3State extends State<input3> {
     databaseReference.once().then((snapshot) {
       setState(() {
         dataList.clear();
-        ReadWriteValue<DatabaseEvent> values = snapshot.val('Grup3');
+        ReadWriteValue<DatabaseEvent> values = snapshot.val('Grup4');
         values.val.snapshot.children.forEach((element) {
           var xx = element.value.val(element.key.toString()).val;
         });
