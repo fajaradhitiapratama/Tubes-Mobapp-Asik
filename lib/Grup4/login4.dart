@@ -18,7 +18,7 @@ import 'package:sign_button/sign_button.dart';
 class login4new extends StatelessWidget {
   const login4new({Key? key}) : super(key: key);
 
-  static const String _title = 'LOGIN PAGE';
+  static const String _title = 'P LOGIN';
 
   @override
   Widget build(BuildContext context) {
@@ -80,26 +80,36 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(1),
                 child: const Text(
-                  '1108780030',
+                  'TT-43-Gab1',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 208, 33, 243),
                       fontWeight: FontWeight.w500,
                       fontSize: 20),
                 )),
-            CircleAvatar(
-              radius: 60,
-              child: Container(
-                height: 120,
-                width: 120,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("lib/images/glb.jpg"),
-                    fit: BoxFit.fitWidth,
-                  ),
-                  shape: BoxShape.circle,
-                ),
-              ),
-            ),
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(1),
+                child: const Text(
+                  'Mobile Application EZ',
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 26, 53, 206),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20),
+                )),
+            // CircleAvatar(
+            //   radius: 60,
+            //   child: Container(
+            //     height: 120,
+            //     width: 120,
+            //     decoration: const BoxDecoration(
+            //       image: DecorationImage(
+            //         image: AssetImage("lib/images/glb.jpg"),
+            //         fit: BoxFit.fitWidth,
+            //       ),
+            //       shape: BoxShape.circle,
+            //     ),
+            //   ),
+            // ),
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
@@ -262,7 +272,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SignUpScreen1108780030(),
+                        builder: (context) => SignUpScreen4(),
                       ),
                     );
                     //signup screen

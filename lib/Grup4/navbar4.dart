@@ -1,8 +1,8 @@
-import 'package:UAS_project/1108780030/Write1108780030.dart';
+//import 'package:UAS_project/Grup4/Write1108780030.dart';
 import 'package:UAS_project/1108780030/baca1108780030.dart';
 import 'package:UAS_project/1108780030/crud1108780030.dart';
 import 'package:UAS_project/1108780030/hal1108780030.dart';
-import 'package:UAS_project/1108780030/home1108780030.dart';
+import 'package:UAS_project/Grup4/home4.dart';
 import 'package:UAS_project/1108780030/read_edit1108780030.dart';
 import 'package:UAS_project/1108780030/viewdata1108780030.dart';
 import 'package:UAS_project/services/auth_service.dart';
@@ -24,13 +24,11 @@ class NavBarView extends StatelessWidget {
   final _controller = Get.put(NavBarController());
 
   final List<Widget> _listPage = [
-    home1108780030(),
-    hal1108780030old(),
-    View1108780030(),
-    crud1108780030(),
-    baca1108780030()
-    // RE_1108780030(),
-    // Tulis1108780030()
+    home4(),
+    // view4(),
+    // update4(),
+    // input4()
+    // download4()
   ];
 
   // final List<String> _listTitleAppBar = const [
@@ -69,11 +67,13 @@ class NavBarView extends StatelessWidget {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.assignment), label: 'Page-1'),
-            BottomNavigationBarItem(icon: Icon(Icons.science), label: 'Page-2'),
-            BottomNavigationBarItem(icon: Icon(Icons.science), label: 'CRUD'),
+                icon: Icon(Icons.assignment), label: 'View Data'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.science), label: 'New CRUD'),
+                icon: Icon(Icons.science), label: 'Update Data'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.science), label: 'Input Data'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.science), label: 'View W & H'),
           ],
           onTap: (value) => _controller.pageChange(value),
         ),
