@@ -1,3 +1,4 @@
+import 'package:UAS_project/Grup4/home4.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -83,7 +84,7 @@ class _Hal1State extends State<Hal1> {
                   final result = await Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => login4(),
+                      builder: (context) => login4new(),
                     ),
                   );
                   setState(() {

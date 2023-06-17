@@ -12,14 +12,11 @@ import 'package:path_provider_android/path_provider_android.dart';
 import 'package:google_sign_in_ios/google_sign_in_ios.dart';
 import 'package:image_picker_ios/image_picker_ios.dart';
 import 'package:path_provider_foundation/path_provider_foundation.dart';
-import 'package:file_selector_linux/file_selector_linux.dart';
 import 'package:image_picker_linux/image_picker_linux.dart';
 import 'package:path_provider_linux/path_provider_linux.dart';
 import 'package:facebook_auth_desktop/facebook_auth_desktop.dart';
-import 'package:file_selector_macos/file_selector_macos.dart';
 import 'package:image_picker_macos/image_picker_macos.dart';
 import 'package:path_provider_foundation/path_provider_foundation.dart';
-import 'package:file_selector_windows/file_selector_windows.dart';
 import 'package:image_picker_windows/image_picker_windows.dart';
 import 'package:path_provider_windows/path_provider_windows.dart';
 
@@ -36,6 +33,7 @@ class _PluginRegistrant {
           '`google_sign_in_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -45,6 +43,7 @@ class _PluginRegistrant {
           '`image_picker_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -54,6 +53,7 @@ class _PluginRegistrant {
           '`path_provider_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isIOS) {
@@ -64,6 +64,7 @@ class _PluginRegistrant {
           '`google_sign_in_ios` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -73,6 +74,7 @@ class _PluginRegistrant {
           '`image_picker_ios` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -82,18 +84,10 @@ class _PluginRegistrant {
           '`path_provider_foundation` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isLinux) {
-      try {
-        FileSelectorLinux.registerWith();
-      } catch (err) {
-        print(
-          '`file_selector_linux` threw an error: $err. '
-          'The app may not function as expected until you remove this plugin from pubspec.yaml'
-        );
-      }
-
       try {
         ImagePickerLinux.registerWith();
       } catch (err) {
@@ -101,6 +95,7 @@ class _PluginRegistrant {
           '`image_picker_linux` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -110,6 +105,7 @@ class _PluginRegistrant {
           '`path_provider_linux` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isMacOS) {
@@ -120,15 +116,7 @@ class _PluginRegistrant {
           '`facebook_auth_desktop` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
-      }
-
-      try {
-        FileSelectorMacOS.registerWith();
-      } catch (err) {
-        print(
-          '`file_selector_macos` threw an error: $err. '
-          'The app may not function as expected until you remove this plugin from pubspec.yaml'
-        );
+        rethrow;
       }
 
       try {
@@ -138,6 +126,7 @@ class _PluginRegistrant {
           '`image_picker_macos` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -147,18 +136,10 @@ class _PluginRegistrant {
           '`path_provider_foundation` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     } else if (Platform.isWindows) {
-      try {
-        FileSelectorWindows.registerWith();
-      } catch (err) {
-        print(
-          '`file_selector_windows` threw an error: $err. '
-          'The app may not function as expected until you remove this plugin from pubspec.yaml'
-        );
-      }
-
       try {
         ImagePickerWindows.registerWith();
       } catch (err) {
@@ -166,6 +147,7 @@ class _PluginRegistrant {
           '`image_picker_windows` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
       try {
@@ -175,6 +157,7 @@ class _PluginRegistrant {
           '`path_provider_windows` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
+        rethrow;
       }
 
     }
