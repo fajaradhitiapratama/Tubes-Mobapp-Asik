@@ -367,8 +367,7 @@ class _SignUpScreen4State extends State<SignUpScreen4> {
                             context: context,
                             builder: (context) => AlertDialog(
                               title: Text("AlertDialog Title"),
-                              content: Text(
-                                  "This is the content of the AlertDialog"),
+                              content: Text("Password lu lemah bro"),
                               actions: [
                                 TextButton(
                                   child: Text("OK"),
