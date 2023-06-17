@@ -1,5 +1,6 @@
 import 'package:UAS_project/Grup4/home4.dart';
 import 'package:UAS_project/Grup4/input4.dart';
+import 'package:UAS_project/Grup4/update4.dart';
 import 'package:UAS_project/Grup4/view4.dart';
 import 'package:UAS_project/services/auth_service.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class NavBarView extends StatelessWidget {
     home4(),
     view4(),
     input4(),
-    // update4(),
+    update4(),
     // download4(),
   ];
 

@@ -52,7 +52,7 @@ class _ImageUploadsState extends State<ImageUploads> {
   Future uploadFile() async {
     if (_photo == null) return;
     final fileName = basename(_photo!.path);
-    final destination = 'files/$fileName';
+    final destination = 'Group4/citraW/$fileName';
     print(destination);
     try {
       final ref = firebase_storage.FirebaseStorage.instance.ref(destination);
