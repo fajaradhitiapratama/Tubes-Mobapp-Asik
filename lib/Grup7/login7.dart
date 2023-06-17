@@ -1,8 +1,9 @@
+import 'package:UAS_project/1108780030/reset1108780030.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:UAS_project/Grup7/nav7.dart';
-import 'package:UAS_project/Grup7/reset7.dart';
-import 'package:UAS_project/Grup7/signup7.dart';
+// import 'package:UAS_project/Grup7/nav7.dart';
+// import 'package:UAS_project/Grup7/reset7.dart';
+// import 'package:UAS_project/Grup7/signup7.dart';
 import 'package:UAS_project/controller/create_new_pass.dart';
 import 'package:UAS_project/services/auth_service.dart';
 import 'package:UAS_project/services/confirm_pass.dart';
@@ -132,7 +133,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => reset7(),
+                    builder: (context) => reset1108780030(),
                   ),
                 );
                 //forgot password screen
@@ -169,15 +170,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         _showSnackbarReview(
                             false, user1!.email.toString() + ' Berhasil Masuk');
                         // debugPrint(user1.toString() + " success123");
-                        final result = await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => NavBarView(),
-                          ),
-                        );
-                        setState(() {
-                          _message = result ?? '';
-                        });
+                        // final result = await Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => NavBarView(),
+                        //   ),
+                        // );
+                        // setState(() {
+                        //   _message = result ?? '';
+                        // });
                       } catch (e) {
                         _showSnackbarReview(true, 'Password Salah');
 
@@ -231,15 +232,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               onPressed: () async {
                 await AuthService.googleSignIn(context);
                 // Navigator.pop(context);
-                final result = await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NavBarView(),
-                  ),
-                );
-                setState(() {
-                  _message = result ?? '';
-                });
+                // final result = await Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => NavBarView(),
+                //   ),
+                // );
+                // setState(() {
+                //   _message = result ?? '';
+                // });
               },
               buttonType: ButtonType.google,
             ),
@@ -249,27 +250,27 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             //   onPressed: () {},
             //   buttonType: ButtonType.facebook,
             // ),
-            Row(
-              children: <Widget>[
-                const Text('Does not have account?'),
-                TextButton(
-                  child: const Text(
-                    'Sign Up',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SignUpScreen7(),
-                      ),
-                    );
-                    //signup screen
-                  },
-                )
-              ],
-              mainAxisAlignment: MainAxisAlignment.center,
-            ),
+            // Row(
+            //   children: <Widget>[
+            //     const Text('Does not have account?'),
+            //     TextButton(
+            //       child: const Text(
+            //         'Sign Up',
+            //         style: TextStyle(fontSize: 20),
+            //       ),
+            //       // onPressed: () {
+            //       //   Navigator.push(
+            //       //     context,
+            //       //     MaterialPageRoute(
+            //       //       builder: (context) => SignUpScreen7(),
+            //       //     ),
+            //       //   );
+            //       //   //signup screen
+            //       // },
+            //     )
+            //   ],
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            // ),
           ],
         ));
   }
