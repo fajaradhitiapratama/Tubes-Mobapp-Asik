@@ -2,6 +2,7 @@ import 'package:UAS_project/Grup4/home4.dart';
 import 'package:UAS_project/Grup4/input4.dart';
 import 'package:UAS_project/Grup4/update4.dart';
 import 'package:UAS_project/Grup4/view4.dart';
+import 'package:UAS_project/Grup4/viewfile4.dart';
 import 'package:UAS_project/services/auth_service.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class NavBarView extends StatelessWidget {
     view4(),
     input4(),
     update4(),
-    // download4(),
+    download4(),
   ];
 
   final List<String> _listTitleAppBar = const [

@@ -48,20 +48,20 @@ class _home4State extends State<home4> {
                         fontWeight: FontWeight.w500,
                         fontSize: 20),
                   )),
-              // CircleAvatar(
-              //   radius: 40,
-              //   child: Container(
-              //     height: 30,
-              //     width: 30,
-              //     decoration: const BoxDecoration(
-              //       image: DecorationImage(
-              //         image: AssetImage("lib/images/Abbey.jpg"),
-              //         fit: BoxFit.fitWidth,
-              //       ),
-              //       shape: BoxShape.circle,
-              //     ),
-              //   ),
-              // ),
+              CircleAvatar(
+                radius: 50,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/Abbey.jpg"),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(1),
@@ -82,20 +82,20 @@ class _home4State extends State<home4> {
                         fontWeight: FontWeight.w500,
                         fontSize: 15),
                   )),
-              // CircleAvatar(
-              //   radius: 40,
-              //   child: Container(
-              //     height: 30,
-              //     width: 30,
-              //     decoration: const BoxDecoration(
-              //       image: DecorationImage(
-              //         image: AssetImage("lib/images/arya.JPG"),
-              //         fit: BoxFit.fitWidth,
-              //       ),
-              //       shape: BoxShape.circle,
-              //     ),
-              //   ),
-              // ),
+              CircleAvatar(
+                radius: 50,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/arya.JPG"),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(1),
@@ -116,20 +116,20 @@ class _home4State extends State<home4> {
                         fontWeight: FontWeight.w500,
                         fontSize: 15),
                   )),
-              // CircleAvatar(
-              //   radius: 40,
-              //   child: Container(
-              //     height: 30,
-              //     width: 30,
-              //     decoration: const BoxDecoration(
-              //       image: DecorationImage(
-              //         image: AssetImage("lib/images/fajar.JPG"),
-              //         fit: BoxFit.fitWidth,
-              //       ),
-              //       shape: BoxShape.circle,
-              //     ),
-              //   ),
-              // ),
+              CircleAvatar(
+                radius: 50,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("lib/images/fajar.JPG"),
+                      fit: BoxFit.fitWidth,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(1),
