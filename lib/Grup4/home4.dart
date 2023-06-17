@@ -123,7 +123,7 @@ class _home4State extends State<home4> {
               //     width: 30,
               //     decoration: const BoxDecoration(
               //       image: DecorationImage(
-              //         image: AssetImage("lib/images/fajar.png"),
+              //         image: AssetImage("lib/images/fajar.JPG"),
               //         fit: BoxFit.fitWidth,
               //       ),
               //       shape: BoxShape.circle,

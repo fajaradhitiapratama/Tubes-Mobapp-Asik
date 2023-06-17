@@ -86,12 +86,9 @@ flutter:
     - lib/images/aldira.png
     - lib/images/Sabila.jpg
     - lib/images/Reyhan_F.jpg
-    - lib/images/Sri.jpg
-    - lib/images/LogoGrup2.jpg
     - lib/images/athaliqa.jpg
-    - lib/images/fajar.png
+    - lib/images/fajar.JPG
     - lib/images/Andri.png
-    - lib/images/group7art.jpg
     - lib/images/fotofeni.png
     - lib/images/Raiyan_Adi.jpeg
     - lib/images/Rima_Ananda.jpeg
@@ -107,6 +104,7 @@ flutter:
     - lib/images/arya.jpg
     - lib/images/hilmy.jpeg
     - lib/images/Abbey.jpg
+    - lib/images/Ez.png
     - assets/google_logo.svg
     - assets/facebook_logo.svg
 

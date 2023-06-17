@@ -96,20 +96,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       fontWeight: FontWeight.w500,
                       fontSize: 20),
                 )),
-            // CircleAvatar(
-            //   radius: 60,
-            //   child: Container(
-            //     height: 120,
-            //     width: 120,
-            //     decoration: const BoxDecoration(
-            //       image: DecorationImage(
-            //         image: AssetImage("lib/images/glb.jpg"),
-            //         fit: BoxFit.fitWidth,
-            //       ),
-            //       shape: BoxShape.circle,
-            //     ),
-            //   ),
-            // ),
+            CircleAvatar(
+              radius: 50,
+              child: Container(
+                height: 80,
+                width: 80,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("lib/images/Ez.png"),
+                    fit: BoxFit.fitWidth,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
