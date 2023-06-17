@@ -43,7 +43,7 @@ class NavBarView extends StatelessWidget {
             BottomNavigationBarItem(
                 icon: Icon(Icons.update), label: 'Update Data'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.view_compact), label: 'View Data W & H'),
+                icon: Icon(Icons.view_compact), label: 'View FILE'),
           ],
           onTap: (value) => _controller.pageChange(value),
         ),
