@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
   var k;
   @override
   Widget build(BuildContext context) {
-    final ref = fb.ref().child('todos');
+    final ref = fb.ref().child('Grup4');
 
     return Scaffold(
       // floatingActionButton: FloatingActionButton(
@@ -87,58 +87,58 @@ class _HomeState extends State<Home> {
                 k = snapshot.key;
               });
 
-              showDialog(
-                context: context,
-                builder: (ctx) => AlertDialog(
-                  title: Container(
-                    decoration: BoxDecoration(border: Border.all()),
-                    child: TextField(
-                      controller: second,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: 'title',
-                      ),
-                    ),
-                  ),
-                  content: Container(
-                    decoration: BoxDecoration(border: Border.all()),
-                    child: TextField(
-                      controller: third,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: 'sub title',
-                      ),
-                    ),
-                  ),
-                  actions: <Widget>[
-                    MaterialButton(
-                      onPressed: () {
-                        Navigator.of(ctx).pop();
-                      },
-                      color: Color.fromARGB(255, 0, 22, 145),
-                      child: Text(
-                        "Cancel",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    MaterialButton(
-                      onPressed: () async {
-                        await upd();
-                        Navigator.of(ctx).pop();
-                      },
-                      color: Color.fromARGB(255, 0, 22, 145),
-                      child: Text(
-                        "Update",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              );
+              // // showDialog(
+              // //   context: context,
+              // //   builder: (ctx) => AlertDialog(
+              // //     title: Container(
+              // //       decoration: BoxDecoration(border: Border.all()),
+              // //       child: TextField(
+              // //         controller: second,
+              // //         textAlign: TextAlign.center,
+              // //         decoration: InputDecoration(
+              // //           hintText: 'title',
+              // //         ),
+              // //       ),
+              // //     ),
+              // //     content: Container(
+              // //       decoration: BoxDecoration(border: Border.all()),
+              // //       child: TextField(
+              // //         controller: third,
+              // //         textAlign: TextAlign.center,
+              // //         decoration: InputDecoration(
+              // //           hintText: 'sub title',
+              // //         ),
+              // //       ),
+              // //     ),
+              // //     actions: <Widget>[
+              // //       MaterialButton(
+              // //         onPressed: () {
+              // //           Navigator.of(ctx).pop();
+              // //         },
+              // //         color: Color.fromARGB(255, 0, 22, 145),
+              // //         child: Text(
+              // //           "Cancel",
+              // //           style: TextStyle(
+              // //             color: Colors.white,
+              // //           ),
+              // //         ),
+              // //       ),
+              // //       MaterialButton(
+              // //         onPressed: () async {
+              // //           await upd();
+              // //           Navigator.of(ctx).pop();
+              // //         },
+              // //         color: Color.fromARGB(255, 0, 22, 145),
+              // //         child: Text(
+              // //           "Update",
+              // //           style: TextStyle(
+              // //             color: Colors.white,
+              // //           ),
+              // //         ),
+              // //       ),
+              // //     ],
+              // //   ),
+              // );
             },
             // child: Container(
             //   // child: Padding(
