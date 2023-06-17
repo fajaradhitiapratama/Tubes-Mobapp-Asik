@@ -1,4 +1,5 @@
 import 'package:UAS_project/Grup4/addnote4.dart';
+import 'package:UAS_project/Grup4/controllerupdate.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -17,7 +18,7 @@ class _update4State extends State<update4> {
     return MaterialApp(
       title: "view data app",
       theme: ThemeData(
-        primaryColor: Color.fromARGB(255, 92, 8, 81),
+        primaryColor: Color.fromARGB(255, 32, 27, 32),
       ),
       home: Home(),
       debugShowCheckedModeBanner: false,
@@ -60,12 +61,12 @@ class _HomeState extends State<Home> {
       // ),
       appBar: AppBar(
         title: Text(
-          'View Data Bro',
+          'Update Data Bro',
           style: TextStyle(
             fontSize: 20,
           ),
         ),
-        backgroundColor: Colors.indigo[900],
+        backgroundColor: Color.fromARGB(255, 124, 165, 11),
       ),
       body: FirebaseAnimatedList(
         query: ref,
@@ -90,55 +91,60 @@ class _HomeState extends State<Home> {
 
               showDialog(
                 context: context,
-                builder: (ctx) => AlertDialog(
-                  title: Container(
-                    decoration: BoxDecoration(border: Border.all()),
-                    child: TextField(
-                      controller: second,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: 'title',
-                      ),
-                    ),
-                  ),
-                  content: Container(
-                    decoration: BoxDecoration(border: Border.all()),
-                    child: TextField(
-                      controller: third,
-                      textAlign: TextAlign.center,
-                      decoration: InputDecoration(
-                        hintText: 'sub title',
-                      ),
-                    ),
-                  ),
-                  actions: <Widget>[
-                    MaterialButton(
-                      onPressed: () {
-                        Navigator.of(ctx).pop();
-                      },
-                      color: Color.fromARGB(255, 0, 22, 145),
-                      child: Text(
-                        "Cancel",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    MaterialButton(
-                      onPressed: () async {
-                        await upd();
-                        Navigator.of(ctx).pop();
-                      },
-                      color: Color.fromARGB(255, 0, 22, 145),
-                      child: Text(
-                        "Update",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                builder: (ctx) => updatedata4(),
+                //     title: Container(
+                //       decoration: BoxDecoration(border: Border.all()),
+                //       child: TextField(
+                //         controller: second,
+                //         textAlign: TextAlign.center,
+                //         decoration: InputDecoration(
+                //           hintText: 'title',
+                //         ),
+                //       ),
+                //     ),
+                //     content: Container(
+                //       decoration: BoxDecoration(border: Border.all()),
+                //       child: TextField(
+                //         controller: third,
+                //         textAlign: TextAlign.center,
+                //         decoration: InputDecoration(
+                //           hintText: 'sub title',
+                //         ),
+                //       ),
+                //     ),
+                //     actions: <Widget>[
+                //       MaterialButton(
+                //         onPressed: () {
+                //           Navigator.of(ctx).pop();
+                //         },
+                //         color: Color.fromARGB(255, 0, 22, 145),
+                //         child: Text(
+                //           "Cancel",
+                //           style: TextStyle(
+                //             color: Colors.white,
+                //           ),
+                //         ),
+                //       ),
+                //       MaterialButton(
+                //         onPressed: () async {
+                //           await upd();
+                //           Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (context) => updatedata4(),
+                //             ),
+                //           );
+                //         },
+                //         color: Color.fromARGB(255, 0, 22, 145),
+                //         child: Text(
+                //           "Update",
+                //           style: TextStyle(
+                //             color: Colors.white,
+                //           ),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
               );
             },
             child: Container(

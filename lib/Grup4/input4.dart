@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
+import 'package:UAS_project/Grup4/imageupload4.dart';
 import 'package:UAS_project/controller/image_upload.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
@@ -148,7 +149,7 @@ class _input4State extends State<input4> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ImageUploads(),
+                              builder: (context) => ImageUploadScreen(),
                             ),
                           );
                         }),
