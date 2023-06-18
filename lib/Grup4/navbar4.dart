@@ -18,7 +18,7 @@ class NavBarView extends StatelessWidget {
     view4(),
     input4(),
     update4(),
-    download4(),
+    foldercheck4(),
   ];
 
   final List<String> _listTitleAppBar = const [

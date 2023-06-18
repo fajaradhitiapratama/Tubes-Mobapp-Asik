@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
+import 'package:UAS_project/Grup4/audioupload4.dart';
 import 'package:UAS_project/Grup4/imageupload4.dart';
 import 'package:UAS_project/controller/image_upload.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -90,6 +91,7 @@ class _input4State extends State<input4> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 124, 17, 110),
         title: Text('Input data P'),
       ),
       body: Column(
@@ -124,17 +126,23 @@ class _input4State extends State<input4> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // readData();
-                        // print(x);
                         writeData(
                           namaController.text,
                           emailController.text,
                           jenisController.text,
                           teksController.text,
-                          // double.parse(nilaiController.text),
-                          // resumeController.text,
                         );
+                        showDialog(
+                            context: context,
+                            builder: ((context) {
+                              return AlertDialog(
+                                title: Text('DONE BANG'),
+                                content: Text('Input DONE'),
+                              );
+                            }));
                       },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepOrange),
                       child: Text('Tambah Data'),
                     ),
                     // ElevatedButton(
@@ -144,26 +152,35 @@ class _input4State extends State<input4> {
                     //   child: Text('Bersihkan Kolom'),
                     // ),
 
-                    TextButton(
-                        onPressed: (() {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ImageUploadScreen(),
-                            ),
-                          );
-                        }),
-                        child: Text("Unggah Citra W")),
-                    // TextButton(
-                    //     onPressed: (() {
-                    //       Navigator.push(
-                    //         context,
-                    //         MaterialPageRoute(
-                    //           builder: (context) => ImageView(),
-                    //         ),
-                    //       );
-                    //     }),
-                    //     child: Text("Unggah Audio H"))
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        TextButton(
+                            onPressed: (() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ImageUploadScreen(),
+                                ),
+                              );
+                            }),
+                            child: Text(
+                              "Unggah Citra W",
+                              style: TextStyle(color: Colors.black),
+                            )),
+                        TextButton(
+                            onPressed: (() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => audioupload4(),
+                                ),
+                              );
+                            }),
+                            child: Text("Unggah Audio H",
+                                style: TextStyle(color: Colors.black))),
+                      ],
+                    )
                   ],
                 ),
               ],

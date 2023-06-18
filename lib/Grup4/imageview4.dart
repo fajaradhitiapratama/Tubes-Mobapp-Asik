@@ -24,23 +24,23 @@ import 'package:path_provider/path_provider.dart';
 // }
 
 class ImageView extends StatelessWidget {
-  static final String title = 'Firebase Download';
+  static final String title = 'View and Download';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: MainPage(),
+        home: imageview(),
       );
 }
 
-class MainPage extends StatefulWidget {
+class imageview extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _imageviewState createState() => _imageviewState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _imageviewState extends State<imageview> {
   // late Future<List<FirebaseFile>> futureFiles;
   late Future<ListResult> futureFiles;
   Map<int, double> downloadProgress = {};
@@ -48,7 +48,7 @@ class _MainPageState extends State<MainPage> {
   void initState() {
     super.initState();
     // futureFiles = FirebaseStorage.instance.ref('/files').listAll();
-    futureFiles = FirebaseStorage.instance.ref('/files/grup4/').listAll();
+    futureFiles = FirebaseStorage.instance.ref('/Group4/citraW/').listAll();
 // gs://mobapp-2223-2.appspot.com/files/kolaborasi 1.png/file
     // futureFiles = FirebaseApi.listAll('files/');
   }
@@ -59,21 +59,21 @@ class _MainPageState extends State<MainPage> {
           title: Text(ImageView.title),
           centerTitle: true,
           actions: <Widget>[
-            IconButton(
-              icon: const Icon(
-                Icons.arrow_back,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                // Navigator.of(context).pop();
-                // Navigator.of(context).canPop();
-                // Navigator.of(context, rootNavigator: true).pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return NavBarView();
-                }));
-                // Navigator.pop(context);
-              },
-            ),
+            // IconButton(
+            //   icon: const Icon(
+            //     Icons.arrow_back,
+            //     color: Colors.white,
+            //   ),
+            //   onPressed: () {
+            //     // Navigator.of(context).pop();
+            //     // Navigator.of(context).canPop();
+            //     // Navigator.of(context, rootNavigator: true).pop(context);
+            //     Navigator.push(context, MaterialPageRoute(builder: (context) {
+            //       return NavBarView();
+            //     }));
+            //     // Navigator.pop(context);
+            //   },
+            // ),
           ],
         ),
         // body: FutureBuilder<List<FirebaseFile>>(
